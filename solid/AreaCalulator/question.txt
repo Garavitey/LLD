@@ -1,0 +1,14 @@
+The Project: Area Calculator
+Build a system that calculates the total area of various shapes.
+Requirements:
+	1.	Shape Classes: Create a Rectangle class (with width and height) and a Circle class (with radius).
+	2.	The Calculator: Create an AreaCalculator class that has a method to calculate the total area of an array (or List) of shapes.
+	3.	The Execution: In your Main class, create a few shapes, put them in a list, and print the total area.
+
+
+
+// class design
+
+// i need a differnt class for shape and the shape can have a area method. 
+// what i can do is acutally interface, that has a method called area
+// now that it has an area, i can calulate area by using the methoditsel

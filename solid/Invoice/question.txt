@@ -1,0 +1,9 @@
+The Project: Simple Invoice System
+Build a small system that handles an Invoice. To keep it to 2–3 files, here is exactly what your code should do:
+	1.	Represent an Invoice: It should have an id, an amount, and a description.
+	2.	Save to File: It should have a method that takes the invoice data and saves it to a .txt file on your computer.
+	3.	Print Report: It should have a method that formats the invoice nicely and prints it to the console.
+Your Task
+Create two files:
+•	Invoice.java: This class will contain the data and the logic for saving and printing.
+•	Main.java: This will be your entry point to create an invoice object and call its methods.
