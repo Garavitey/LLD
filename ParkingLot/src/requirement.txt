@@ -1,0 +1,15 @@
+Parking Lot Requirements?
+1. in a parking lot there should be multiple floors
+2. each floor should have various parking spots
+3. each parking spot can be of various types
+4. types can be electic car, electric bike, bike, car, truck
+5. at the end then the vechicle is leaving we will give it price
+6. there can be various pricing strategy we will start with number of time multiplied by some constant to begin with
+7. each parking spot can have a vechile like itself or something smaller -> we park it to various other place only when we have no space
+
+
+non functions
+1. start with inmemory database but expand it to a real database later(write a repository pattern here)/
+2. no ui needed we will build a cli tool only
+3. we might make it concorent later
+4.
