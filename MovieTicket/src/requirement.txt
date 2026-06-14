@@ -1,0 +1,90 @@
+I think its better to think in terms of how the booking service actually work
+
+// the client does the search of a movie
+// the a list of threter with timing is choosen,
+// the client will select a threater and the seat and that seat will be booked for him.(in main we will just
+select any number)
+the cli we will take care of it in time
+
+// okay now what do you think we need -> i will deal with concorrent thing later
+
+now what do you think i need
+1. i need a way to have city -> will have muliple threatres -> have mulitple showstimes and inside of
+ -> show timing we will have threater lets say a vector that will either be booked or not booked
+
+2. there should be a orchestrator that will take the this datastructe and orchestror things for us
+
+3. there should be a search service that will take city as input and return list of all the
+threatre
+4. then there should be a service that will take movie as input and return a list of all the
+threater that are showing the movie, it will also take time an input and return all the thretre showing the movie
+for now we will just keep it one day
+
+5. ans then there can one more service that will do the booking?
+
+non function requirement
+1. i think no two person should be able to book the same seat? -> i will take care of it after
+implemnting the ake thinky
+2. can't think of any non function thing
+
+Class Design
+
+City{
+city id
+name
+vector<Threatre> listofthreatre
+
+// getters and setters
+}
+
+Threater{
+id
+name
+vector<shows> all shows
+
+// getters and setters
+}
+
+Show{
+    - start time
+    - endtime
+    - movie name
+    - hall id
+    - datastructure for all the hall seats?
+}
+
+CatalogService{
+    - getmoviebyname
+    - book movie
+
+}
+
+bookingService{
+    - sigleton service that will orchestrate the whole thing.
+}
+
+
+src/main/java/
+│
+├── enums/
+│   ├── SeatType.java          // GOLD, SILVER, VIP
+│   └── BookingStatus.java     // PENDING, CONFIRMED, EXPIRED
+│
+├── models/
+│   ├── City.java
+│   ├── Theatre.java
+│   ├── Screen.java
+│   ├── PhysicalSeat.java
+│   ├── Movie.java
+│   ├── Show.java
+│   └── ShowSeat.java          // The dynamic state tracker
+│
+├── repository/
+│   ├── CityRepository.java
+│   ├── ShowRepository.java
+│   ├── InMemoryCityRepository.java
+│   └── InMemoryShowRepository.java
+│
+└── service/
+    ├── CatalogService.java    // Reads, filters, and searches
+    └── BookingService.java    // Handles the booking orchestration

@@ -55,7 +55,7 @@ public class ParkingService {
         return ticketRepository.save(ticket);
     }
 
-    public double checkOut(String ticketId) {
+    public void checkOut(String ticketId) {
         // 5. Fetch the ticket to handle the driver leaving
         Ticket ticket = ticketRepository.findById(ticketId)
                 .orElseThrow(() -> new RuntimeException("Error: Invalid Ticket ID " + ticketId));
@@ -75,6 +75,5 @@ public class ParkingService {
                 " cleared spot " + spot.getSpotId() +
                 ". Total Fee Collected: Rs. " + amountDue);
 
-        return amountDue;
     }
 }
